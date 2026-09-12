@@ -1,0 +1,14 @@
+[project]
+name = "reliable-agent-runtime"
+version = "0.1.0"
+description = "A small, auditable and recoverable Agent runtime MVP"
+requires-python = ">=3.10"
+dependencies = ["pydantic>=2.0,<3.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+langgraph = ["langgraph>=0.2"]
+mcp = ["mcp>=2.0,<3.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

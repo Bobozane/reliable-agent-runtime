@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">Reliable Agent Runtime test matrix</title>
+  <desc id="desc">A test matrix showing 36 passing tests across normal workflow, lifecycle, reliability, safety, checkpoints, and MCP transport.</desc>
+  <rect width="1200" height="620" rx="16" fill="#f8fafc"/>
+  <text x="55" y="70" fill="#0f172a" font-family="Arial, sans-serif" font-size="32" font-weight="700">Reliable Agent Runtime</text>
+  <text x="55" y="108" fill="#475569" font-family="Arial, sans-serif" font-size="20">Deterministic runtime contract matrix</text>
+  <rect x="865" y="42" width="275" height="82" rx="12" fill="#dcfce7"/>
+  <text x="905" y="78" fill="#166534" font-family="Arial, sans-serif" font-size="27" font-weight="700">36 passed</text>
+  <text x="905" y="104" fill="#166534" font-family="Arial, sans-serif" font-size="16">pytest -q</text>
+  <line x1="55" y1="145" x2="1145" y2="145" stroke="#cbd5e1" stroke-width="2"/>
+  <g font-family="Arial, sans-serif" font-size="18">
+    <text x="70" y="180" fill="#334155" font-weight="700">AREA</text><text x="390" y="180" fill="#334155" font-weight="700">CONTRACT VERIFIED</text><text x="1030" y="180" fill="#334155" font-weight="700">COUNT</text>
+    <g fill="#0f172a">
+      <text x="70" y="225">Normal workflow</text><text x="390" y="225">24 inputs pause for confirmation</text><text x="1050" y="225">24</text>
+      <text x="70" y="275">Lifecycle</text><text x="390" y="275">confirm, decline, lookup, idempotent resume</text><text x="1050" y="275">4</text>
+      <text x="70" y="325">Tool reliability</text><text x="390" y="325">bounded retry and timeout fallback</text><text x="1050" y="325">2</text>
+      <text x="70" y="375">Model reliability</text><text x="390" y="375">temporary and permanent invalid output</text><text x="1050" y="375">2</text>
+      <text x="70" y="425">Safety</text><text x="390" y="425">high-risk exit before persistence</text><text x="1050" y="425">1</text>
+      <text x="70" y="475">Checkpoint safety</text><text x="390" y="475">stale write and same-version race</text><text x="1050" y="475">2</text>
+      <text x="70" y="525">MCP transport</text><text x="390" y="525">official SDK subprocess stdio</text><text x="1050" y="525">1</text>
+    </g>
+    <text x="70" y="580" fill="#64748b" font-size="16">Deterministic evidence, not a production SLO or distributed-lock guarantee.</text>
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">Reliable Agent Runtime demo transcript</title>
+  <desc id="desc">A terminal-style snapshot showing a run pausing for confirmation, resuming, saving idempotently, and recording audit events.</desc>
+  <rect width="1200" height="620" rx="16" fill="#101418"/>
+  <rect width="1200" height="58" rx="16" fill="#1b222b"/>
+  <circle cx="30" cy="29" r="7" fill="#ff6b6b"/><circle cx="54" cy="29" r="7" fill="#ffd166"/><circle cx="78" cy="29" r="7" fill="#66d9a4"/>
+  <text x="110" y="36" fill="#cbd5e1" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18">reliable-agent-runtime / demo</text>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20">
+    <text x="42" y="105" fill="#66d9a4">$ python -m runtime.demo</text>
+    <text x="42" y="145" fill="#e5e7eb">start(...) -&gt; status=paused stage=await_confirmation</text>
+    <text x="42" y="183" fill="#94a3b8">checkpoint: candidates=3, pending_confirmation=true</text>
+    <text x="42" y="233" fill="#f6c453">user confirmation: true</text>
+    <text x="42" y="273" fill="#e5e7eb">resume(run_id) -&gt; status=complete stage=complete</text>
+    <text x="42" y="311" fill="#94a3b8">save_recap: saved=true, idempotency_key=run_id</text>
+    <text x="42" y="365" fill="#66d9a4">audit event chain</text>
+    <text x="42" y="405" fill="#e5e7eb">run_started</text><text x="205" y="405" fill="#64748b">-&gt;</text><text x="250" y="405" fill="#e5e7eb">extraction_completed</text><text x="515" y="405" fill="#64748b">-&gt;</text><text x="560" y="405" fill="#e5e7eb">retrieval_completed</text>
+    <text x="42" y="445" fill="#e5e7eb">generation_completed</text><text x="335" y="445" fill="#64748b">-&gt;</text><text x="380" y="445" fill="#e5e7eb">awaiting_confirmation</text><text x="700" y="445" fill="#64748b">-&gt;</text><text x="745" y="445" fill="#e5e7eb">confirmation_received</text>
+    <text x="42" y="485" fill="#66d9a4">run_completed</text><text x="220" y="485" fill="#94a3b8">(one persisted side effect)</text>
+    <text x="42" y="555" fill="#64748b">Deterministic local demo; no production SLO implied.</text>
+  </g>
+</svg>
