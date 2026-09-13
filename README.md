@@ -33,17 +33,9 @@ confirmation. It prints the run id, checkpoint stage, and audit events.
 
 ![Demo snapshot](docs/demo-snapshot.svg)
 
-## What to show in an interview
-
-1. Start a run and inspect the checkpoint at `await_confirmation`.
-2. Resume it with confirmation and show the idempotent recap save.
-3. Enable a tool timeout/error injection and show retry attempts plus fallback.
-4. Corrupt a structured model response and show validation recovery.
-5. Replay the SQLite event log to explain what happened.
-
 The reproducible fault matrix and observed test output are in
 [`FAILURE_INJECTION_REPORT.md`](FAILURE_INJECTION_REPORT.md). A Mermaid
-overview for GitHub and interview walkthroughs is in
+overview of the runtime is in
 [`ARCHITECTURE.md`](ARCHITECTURE.md).
 
 The compact test matrix is available in [`docs/TEST_MATRIX.md`](docs/TEST_MATRIX.md):
@@ -72,14 +64,11 @@ separate official MCP SDK stdio server, discovers its `echo` tool, invokes it,
 and closes the session. Timeout, retry, fallback and audit behavior remain in
 the runtime, not in the transport.
 
-## Interview materials
+## Documentation
 
-- [中文简历项目表述](RESUME_PROJECT_CN.md)
-- [English resume entry](RESUME_PROJECT_EN.md)
-- [Agent 研发岗面试问答](INTERVIEW_QA.md)
-- [3 分钟项目讲解稿](docs/THREE_MINUTE_TALK.md)
-- [Agent 研发代码走读提纲](docs/CODE_WALKTHROUGH.md)
-- [测试矩阵](docs/TEST_MATRIX.md)
+- [Architecture](ARCHITECTURE.md)
+- [Failure injection report](FAILURE_INJECTION_REPORT.md)
+- [Test matrix](docs/TEST_MATRIX.md)
 
 This project is a second-stage implementation built around reusable open-source
 ideas; it does not claim to reimplement LangGraph or MCP.
